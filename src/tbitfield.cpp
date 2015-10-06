@@ -138,7 +138,7 @@ TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 	TBitField tmp(tmpsize);
 	while ((size>tmp.size)&&(bf.size>tmp.size))
 	{
-		tmp.storage[n] = storage[n]-bf.storage[n];// Error ?
+		tmp.storage[n] = storage[n]-bf.storage[n];// Errors ?
 		n++;
 	};
 	if (tmp.size==size)
