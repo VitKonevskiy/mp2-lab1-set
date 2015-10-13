@@ -17,7 +17,7 @@ typedef unsigned int TELEM;
 class TBitField
 {
 private:
-  int  bitSize; // длина битового поля - макс. к-во битов
+	int  bitSize; // длина битового поля - макс. к-во битов
   TELEM *storage; // память для представления битового поля
   int  size; // к-во эл-тов Мем для представления бит.поля
 
