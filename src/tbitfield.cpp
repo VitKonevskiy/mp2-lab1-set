@@ -50,16 +50,29 @@ int TBitField::GetLength(void) const // получить длину (к-во б�
 
 void TBitField::SetBit(const int n) // установить бит
 {
-	storage[GetMemIndex(n)] |= GetMemMask(n);
+	int tmp=n;
+	while((n<0)&&(n>size))
+	{
+		cout << "Input another number"<<endl;
+		cin >> tmp;
+	}
+	storage[GetMemIndex(tmp)] |= GetMemMask(tmp);
 }
 
 void TBitField::ClrBit(const int n) // очистить бит
 {
-	storage[GetMemIndex(n)] &= ~(GetMemMask(n));
+	int tmp=n;
+	while((n<0)&&(n>size))
+	{
+		cout << "Input another number"<<endl;
+		cin >> tmp;
+	}
+	storage[GetMemIndex(tmp)] &= ~(GetMemMask(tmp));
 }
 
 int TBitField::GetBit(const int n) const // получить значение бита
 {
+
 	int temp = storage[GetMemIndex(n)];
 	temp &= GetMemMask(n);
 	if (temp != 0)
@@ -75,6 +88,7 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 	storage = new TELEM[size];
 	for (int i = 0; i<size; i++)
 		storage[i] = bf.storage[i];
+	return *this;
 }
 
 int TBitField::operator==(const TBitField &bf) const // сравнение
@@ -155,6 +169,10 @@ TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 
 TBitField TBitField::operator~(void) // отрицание
 {
+	TBitField tmp(bitSize);
+	for (int i=0;i<size;i++)
+		tmp.storage[i]=~storage[i];
+	return tmp;
 }
 
 // ввод/вывод
