@@ -139,6 +139,7 @@ istream &operator>>(istream &istr, TSet &s) // ввод
 ostream& operator<<(ostream &ostr, const TSet &s) // вывод
 {
 	for (int i = 0; i < s.MaxPower; i++)
-		 ostr << (s.BitField.GetBit(i));
+		if (s.BitField.GetBit(i))
+			ostr << i;
 	return ostr;
 }

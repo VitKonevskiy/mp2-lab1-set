@@ -1,0 +1,15 @@
+﻿Build started 13.10.2015 22:26:40.
+     1>Project "F:\Git Projects\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         F:\VS 2013\VC\bin\CL.exe /c /I../../../include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\tbitfield.cpp
+         tbitfield.cpp
+     1>..\..\..\src\tbitfield.cpp(16): warning C4551: function call missing argument list
+       Lib:
+         F:\VS 2013\VC\bin\Lib.exe /OUT:"F:\Git Projects\mp2-lab1-set\sln\vc10\Release\bitfield.lib" /NOLOGO /LTCG Release\tbitfield.obj
+         Release\tset.obj
+         bitfield.vcxproj -> F:\Git Projects\mp2-lab1-set\sln\vc10\Release\bitfield.lib
+     1>Done Building Project "F:\Git Projects\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.23

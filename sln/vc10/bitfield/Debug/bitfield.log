@@ -1,31 +1,16 @@
-﻿Build started 10/6/2015 9:29:54 AM.
-     1>Project "C:\Users\stud2014\Documents\GitHub\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" on node 2 (rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\bitfield.lastbuildstate".
-       InitializeBuildStatus:
-         Touching "Debug\bitfield.unsuccessfulbuild".
-       ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\tbitfield.cpp ..\..\..\src\tset.cpp
-         tset.cpp
+﻿Build started 13.10.2015 21:47:30.
+     1>Project "F:\Git Projects\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         F:\VS 2013\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\tbitfield.cpp
          tbitfield.cpp
-         Generating Code...
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tbitfield.cpp(78): error C4716: 'TBitField::operator=' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tbitfield.cpp(157): error C4716: 'TBitField::operator~' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tbitfield.cpp(163): error C4716: 'operator>>' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tbitfield.cpp(167): error C4716: 'operator<<' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(26): error C4716: 'TSet::operator TBitField' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(30): error C4716: 'TSet::GetMaxPower' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(49): error C4716: 'TSet::operator=' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(58): error C4716: 'TSet::operator!=' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(62): error C4716: 'TSet::operator+' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(66): error C4716: 'TSet::operator+' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(70): error C4716: 'TSet::operator-' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(74): error C4716: 'TSet::operator*' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(78): error C4716: 'TSet::operator~' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(84): error C4716: 'operator>>' : must return a value
-     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(88): error C4716: 'operator<<' : must return a value
-     1>Done Building Project "C:\Users\stud2014\Documents\GitHub\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" (rebuild target(s)) -- FAILED.
+     1>f:\git projects\mp2-lab1-set\src\tbitfield.cpp(147): warning C4715: 'TBitField::operator!=' : not all control paths return a value
+     1>f:\git projects\mp2-lab1-set\src\tbitfield.cpp(123): warning C4715: 'TBitField::operator==' : not all control paths return a value
+       Lib:
+         F:\VS 2013\VC\bin\Lib.exe /OUT:"F:\Git Projects\mp2-lab1-set\sln\vc10\Debug\bitfield.lib" /NOLOGO Debug\tbitfield.obj
+         Debug\tset.obj
+         bitfield.vcxproj -> F:\Git Projects\mp2-lab1-set\sln\vc10\Debug\bitfield.lib
+     1>Done Building Project "F:\Git Projects\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.82
+Time Elapsed 00:00:00.96
