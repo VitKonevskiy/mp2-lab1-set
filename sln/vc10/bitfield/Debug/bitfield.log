@@ -1,15 +1,26 @@
-﻿Build started 13.10.2015 21:47:30.
-     1>Project "F:\Git Projects\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         F:\VS 2013\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\tbitfield.cpp
+﻿Build started 10/20/2015 9:29:50 AM.
+     1>Project "C:\Users\stud2014\Documents\GitHub\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" on node 2 (rebuild target(s)).
+       Project file contains ToolsVersion="12.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>_PrepareForClean:
+         Deleting file "Debug\bitfield.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\bitfield.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\tbitfield.cpp ..\..\..\src\tset.cpp
+         tset.cpp
+     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(58): warning C4172: returning address of local variable or temporary
          tbitfield.cpp
-     1>f:\git projects\mp2-lab1-set\src\tbitfield.cpp(147): warning C4715: 'TBitField::operator!=' : not all control paths return a value
-     1>f:\git projects\mp2-lab1-set\src\tbitfield.cpp(123): warning C4715: 'TBitField::operator==' : not all control paths return a value
+         Generating Code...
+     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(68): warning C4715: 'TSet::operator==' : not all control paths return a value
+     1>c:\users\stud2014\documents\github\mp2-lab1-set\src\tset.cpp(77): warning C4715: 'TSet::operator!=' : not all control paths return a value
        Lib:
-         F:\VS 2013\VC\bin\Lib.exe /OUT:"F:\Git Projects\mp2-lab1-set\sln\vc10\Debug\bitfield.lib" /NOLOGO Debug\tbitfield.obj
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\stud2014\Documents\GitHub\mp2-lab1-set\sln\vc10\Debug\bitfield.lib" /NOLOGO Debug\tbitfield.obj
          Debug\tset.obj
-         bitfield.vcxproj -> F:\Git Projects\mp2-lab1-set\sln\vc10\Debug\bitfield.lib
-     1>Done Building Project "F:\Git Projects\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" (Build target(s)).
+         bitfield.vcxproj -> C:\Users\stud2014\Documents\GitHub\mp2-lab1-set\sln\vc10\Debug\bitfield.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\bitfield.unsuccessfulbuild".
+         Touching "Debug\bitfield.lastbuildstate".
+     1>Done Building Project "C:\Users\stud2014\Documents\GitHub\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 

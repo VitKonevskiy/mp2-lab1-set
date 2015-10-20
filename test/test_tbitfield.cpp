@@ -155,14 +155,14 @@ TEST(TBitField, or_operator_applied_to_bitfields_of_equal_size)
 {
   const int size = 4;
   TBitField bf1(size), bf2(size), expBf(size);
-  // bf1 = 0011
+  // bf1 = 0011    //1100
   bf1.SetBit(2);
   bf1.SetBit(3);
-  // bf2 = 0101
+  // bf2 = 0101   //1010
   bf2.SetBit(1);
   bf2.SetBit(3);
 
-  // expBf = 0111
+  // expBf = 0111   // 1110
   expBf.SetBit(1);
   expBf.SetBit(2);
   expBf.SetBit(3);
@@ -174,14 +174,14 @@ TEST(TBitField, or_operator_applied_to_bitfields_of_non_equal_size)
 {
   const int size1 = 4, size2 = 5;
   TBitField bf1(size1), bf2(size2), expBf(size2);
-  // bf1 = 0011
+  // bf1 = 0011    //1100
   bf1.SetBit(2);
   bf1.SetBit(3);
-  // bf2 = 01010
+  // bf2 = 01010	
   bf2.SetBit(1);
   bf2.SetBit(3);
 
-  // expBf = 01110
+  // expBf = 01110		
   expBf.SetBit(1);
   expBf.SetBit(2);
   expBf.SetBit(3);
