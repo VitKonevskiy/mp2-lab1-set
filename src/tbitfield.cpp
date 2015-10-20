@@ -115,28 +115,6 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 
 int TBitField::operator==(const TBitField &bf) const // сравнение
 {
-/*	int f = 0;
-	if (bitSize != bf.bitSize)
-		return 0;
-	else
-	if (bitSize == bf.bitSize)
-	{
-		for (int i = 0; i < size; i++)
-		{
-			if (storage[i] == bf.storage[i])
-				f = 0;
-			else
-			{
-				f = 1;
-				break;
-			}
-		}
-		if (f == 0)
-			return 1;
-		else return 0;
-	}
-	*/
-
 	for (int i=0;i<bitSize;i++)
 	{	
 		if (GetBit(i)!=bf.GetBit(i))
@@ -147,33 +125,13 @@ int TBitField::operator==(const TBitField &bf) const // сравнение
 
 int TBitField::operator!=(const TBitField &bf) const // сравнение
 {
-/*	int f = 0;
-	if (bitSize != bf.bitSize)
-		return 1;
-	else
-	if (bitSize == bf.bitSize)
-	{
-		for (int i = 0; i < size; i++)
-		{
-			if (storage[i] == bf.storage[i])
-				f = 1;
-			else
-			{
-				f = 0;
-				break;
-			}
-		}
-		if (f == 0)
-			return 1;
-		else return 0;
-	}
-*/
+	int n = 0;
 	for (int i=0;i<bitSize;i++)
 	{
-		if (GetBit(i)==bf.GetBit(i))
-			return 0;
+		if (GetBit(i) != bf.GetBit(i))
+			n = 1;
 	}
-	return 1;
+	return n;
 }
 
 TBitField TBitField::operator|(const TBitField &bf) // операция "или"
@@ -181,68 +139,47 @@ TBitField TBitField::operator|(const TBitField &bf) // операция "или"
 	int tmpsize = 0;
 	int n = 0;
 	if (bitSize >= bf.bitSize)
+	{
 		tmpsize = bitSize;
-	else tmpsize = bf.bitSize;
-
+		n = bf.bitSize;
+	}	
+	else
+	{
+		tmpsize = bf.bitSize;
+		n = bitSize;
+	}
 	TBitField tmp(tmpsize);
-/*
-	while ((size>tmp.size) && (bf.size>tmp.size))   //Нужно ли идти до size>=tmp.size    ?
-	{
-		tmp.storage[n] = storage[n] + bf.storage[n];
-		n++;
-	};
-	if (tmp.size == size)
-	for (int i = n; i<size; i++)
-		tmp.storage[i] = storage[i];
-	else
-	for (int i = n; i<bf.size; i++)
-		tmp.storage[i] = bf.storage[i];
+	if (tmpsize == bitSize)
+		tmp = *this;
+	else tmp = bf;
 
+	for (int i = 0; i < n;i++)
+	if ((GetBit(i) || bf.GetBit(i)))
+		tmp.SetBit(i);
 	return tmp;
-*/
-	while ((bitSize>tmp.bitSize) && (bf.bitSize>tmp.bitSize))   //Нужно ли идти до size>=tmp.size    ?
-	{
-		if ((GetBit(n)) || (bf.GetBit(n)))
-			tmp.SetBit(n);
-		n++;
-	};
-	if (tmp.bitSize == bitSize)
-	for (int i = n; i<bitSize; i++)
-		if (GetBit(i))
-			tmp.SetBit(i);
-	else
-	for (int i = n; i<bf.bitSize; i++)
-		if (bf.GetBit(i))
-			tmp.SetBit(i);
-
-	return tmp;
-	
 }
 
 TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 {
-	int tmpsize=0;
-	int n=0;
-	if (size>=bf.size)
-		tmpsize=size;
-	else tmpsize=bf.bitSize;
+	int tmpsize = 0;
+	int n = 0;
+	if (bitSize >= bf.bitSize)
+	{
+		tmpsize = bitSize;
+		n = bf.bitSize;
+	}
+
+	else
+	{
+		tmpsize = bf.bitSize;
+		n = bitSize;
+	}
 
 	TBitField tmp(tmpsize);
-	while ((size>tmp.size)&&(bf.size>tmp.size))
-	{
-		tmp.storage[n] = storage[n]&bf.storage[n];// Errors ?
-		n++;
-	};
-	if (tmp.size==size)
-		for (int i=n;i<size;i++)
-			tmp.storage[i]=storage[i];
-	else
-		for (int i=n;i<bf.size;i++)
-			tmp.storage[i]=bf.storage[i];
-			
+	for (int i = 0; i < n;i++)
+	if (GetBit(i) && bf.GetBit(i))
+		tmp.SetBit(i);
 	return tmp;
-
-
 }
 
 TBitField TBitField::operator~(void) // отрицание

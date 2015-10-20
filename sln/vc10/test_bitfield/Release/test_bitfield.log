@@ -1,20 +1,21 @@
-﻿Build started 13.10.2015 22:26:43.
-     1>Project "F:\Git Projects\mp2-lab1-set\sln\vc10\test_bitfield\test_bitfield.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+﻿Build started 20.10.2015 17:24:34.
+     1>Project "F:\Git Projects\mp2-lab1-set\sln\vc10\test_bitfield\test_bitfield.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         F:\VS 2013\VC\bin\CL.exe /c /I../../../gtest /I../../../include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\test\test_main.cpp ..\..\..\test\test_tbitfield.cpp ..\..\..\test\test_tset.cpp
+         test_main.cpp
+         test_tbitfield.cpp
+         test_tset.cpp
+       Link:
          F:\VS 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Git Projects\mp2-lab1-set\sln\vc10\Release\test_bitfield.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../Release gtest.lib bitfield.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Git Projects\mp2-lab1-set\sln\vc10\Release\test_bitfield.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Git Projects\mp2-lab1-set\sln\vc10\Release\test_bitfield.lib" /MACHINE:X86 /SAFESEH Release\test_main.obj
          Release\test_tbitfield.obj
          Release\test_tset.obj
          "F:\Git Projects\mp2-lab1-set\sln\vc10\Release\gtest.lib"
          "F:\Git Projects\mp2-lab1-set\sln\vc10\Release\bitfield.lib"
          Generating code
-     1>f:\git projects\mp2-lab1-set\src\tbitfield.cpp(121): warning C4715: 'TBitField::operator==' : not all control paths return a value
-     1>f:\git projects\mp2-lab1-set\src\tbitfield.cpp(145): warning C4715: 'TBitField::operator!=' : not all control paths return a value
-     1>f:\git projects\mp2-lab1-set\src\tset.cpp(77): warning C4715: 'TSet::operator!=' : not all control paths return a value
-     1>f:\git projects\mp2-lab1-set\src\tset.cpp(68): warning C4715: 'TSet::operator==' : not all control paths return a value
          Finished generating code
          test_bitfield.vcxproj -> F:\Git Projects\mp2-lab1-set\sln\vc10\Release\test_bitfield.exe
      1>Done Building Project "F:\Git Projects\mp2-lab1-set\sln\vc10\test_bitfield\test_bitfield.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.24
+Time Elapsed 00:00:04.39
